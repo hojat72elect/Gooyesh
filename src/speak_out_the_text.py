@@ -21,12 +21,15 @@ if __name__ == '__main__':
     root.title("Gooyesh text to Speech Engine")
 
     text_label = tk.Label(root, text="Enter text here:")
-    text_label.pack()
+    text_label.grid(row=0, column=0, sticky="w")
 
     text_entry = tk.Text(root, height=10, width=40)
-    text_entry.pack()
+    text_entry.grid(row=1, column=0, columnspan=2, sticky="nsew")
 
     play_button = tk.Button(root, text="Play", command=lambda: speak_out_the_text(text_entry.get("1.0", tk.END)))
-    play_button.pack()
+    play_button.grid(row=2, column=0, sticky="w")
+
+    root.columnconfigure(0, weight=1)
+    root.rowconfigure(1, weight=1)
 
     root.mainloop()
