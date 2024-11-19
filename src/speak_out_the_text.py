@@ -13,8 +13,20 @@ def speak_out_the_text(input_text):
     engine.runAndWait()
 
 
-
 if __name__ == '__main__':
-    speak_out_the_text("My name is Jonathan blow.")
-    speak_out_the_text("How are you doing today?")
-    speak_out_the_text("Yes it's a pleasant day.")
+    import tkinter as tk
+    from tkinter import messagebox
+
+    root = tk.Tk()
+    root.title("Gooyesh text to Speech Engine")
+
+    text_label = tk.Label(root, text="Enter text here:")
+    text_label.pack()
+
+    text_entry = tk.Text(root, height=10, width=40)
+    text_entry.pack()
+
+    play_button = tk.Button(root, text="Play", command=lambda: speak_out_the_text(text_entry.get("1.0", tk.END)))
+    play_button.pack()
+
+    root.mainloop()
