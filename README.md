@@ -1,3 +1,3 @@
-`Gooyesh` is a fast and easy library for converting text to speech. It can be used for adding voice over to animations and video games.
+This repo is going to be my playground of computational linguistics. 
+In here will try to implement some of the basic (and not so basic) concepts of NLP.
 
-This library is still in development phase and has not been fully stabilized just yet.
